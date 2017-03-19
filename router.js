@@ -83,7 +83,7 @@ router.get('/strategy', async function (ctx, next) {
       if ( k == 'name' ) td.push('<a href="/strategy/'+v+'">'+v+'</a>')
       else if ( k == '_id' ) {
         console.log( 'map', scrapy.map[v])
-        if ( scrapy.map[v] == 'run' ) td.push('<a href="/strategy/stop/'+v+'">'+'停止</a>')
+        if ( scrapy.map[v] == 'run' && scrapy.cli[v] !== 'stop') td.push('<a href="/strategy/stop/'+v+'">'+'停止</a>')
         else td.push('<a href="/strategy/run/'+v+'">'+'启动</a>')
       }
       else td.push(v)
