@@ -1,0 +1,42 @@
+<% include newheader %>
+
+<div class="container">
+  <div class="ui form segment" style="width:800px;margin:5px auto">
+    <p><%= flash.error %></p>
+    <form method="post">
+
+      <div class="field required">
+        <label>策略名称</label>
+        <input placeholder="xxoo" type="text" name="name">
+      </div>
+
+      <div class="field required">
+        <label>爬取地址</label>
+        <input placeholder="http://www.xxx.com" type="text" name="url">
+      </div>
+
+      <div class="two fields">
+        <div class="field">
+          <label>间隔</label>
+          <input placeholder="xxx ms" type="text" name="sleepTime">
+        </div>
+        <div class="field required">
+          <label>次数</label>
+          <input placeholder="xxx 次" type="text" name="reqTime">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>备注</label>
+        <input type="text" placeholder="限制在50字以内" name="hint">
+      </div>
+      <input type="submit" class="ui button fluid" value="注册">
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('.ui.dropdown').dropdown();
+</script>
+
+<% include footer %>

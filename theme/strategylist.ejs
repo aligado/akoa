@@ -1,0 +1,31 @@
+<% include newheader %>
+<div class="container">
+  <div class="ui form segment" style="width:800px;margin:10px auto">
+  <h2 class="ui center aligned header">策略列表</h2>
+  <style>
+    .ui.padded.table th, .ui.padded.table td { padding: 0.2em 0.2em; }
+  </style>
+  <table class="ui celled padded table">
+    <thead>
+      <tr>
+        <% ths.forEach( function(item, index) { %>
+          <th>
+            <%= item %>
+          </th>
+        <% }) %>
+      </tr>
+    </thead>
+    <tbody>
+      <% tds.forEach( function(td, index) { %>
+        <tr>
+          <% td.forEach( function(v, k) { %>
+            <td><%- v %></td>
+          <% }) %>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<% include footer %>
